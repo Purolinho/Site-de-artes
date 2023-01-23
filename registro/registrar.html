@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="registrar.css">
+    <link rel="shortcut icon" href="HEX_Logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <header><h2>Formulario de Registro</h2></header>
+
+    <main>
+        <form action="painel.php" method="post">
+            <label>Nome</label><input type="text" name="nome">
+            <label>Idade</label><input type="text" name="idade" onkeypress='return event.charCode >= 48 && event.charCode <= 57'> 
+            <label>Data de Anivesario</label><input type="date" name="data"> 
+            <label>Estilo arte preferido:</label> 
+            <ul>
+            <li><label for="arte1">Line Art</label><input type="radio" name="arte" id="arte1" value="Line Art"></li> 
+            <li><label for="arte2"></label>2D<input type="radio" name="arte" id="arte2" value="2D"></li> 
+            <li><label for="arte3">3D</label><input type="radio" name="arte" id="arte3" value="3D"></li> 
+            <li><label for="arte4">Animation</label><input type="radio" name="arte" id="arte4" value="Animation"></li> 
+            <li><label for="arte5">Outro</label><input type="radio" name="arte" id="arte5" value="Outro"></li> 
+            </ul>
+            <label>Senha</label><input type="password" name="senha" pattern="\S(?:\s*\S){3}.*\S" title="Sua senha deve conter no minimo 6 caracteres"> 
+            <label>Numero de Telefone</label><input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx"onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 45 || event.charCode == 40 || event.charCode == 41'>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    
+</body>
+</html>

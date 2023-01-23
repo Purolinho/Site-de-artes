@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: rgb(2, 0, 3);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.5%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav > ul:first-of-type {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+li {
+    cursor: pointer;
+}
+
+nav > ul:first-of-type > li {
+    background-color: rgb(0, 114, 214);
+    padding: 3% 2.5%;
+    border: 1px solid white;
+}
+
+.user {
+    align-items: center;
+    display: flex;
+    color: white;
+    font-size: medium;
+}
+
+.user > img {
+    cursor: pointer;
+}
+
+body {
+    background-size: 400%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(0, 255, 157), rgb(255, 166, 0), yellow, orange, rgb(195, 0, 255), rgb(255, 0, 0));
+    animation: animação 15s infinite ease;
+}
+
+@keyframes animação {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+
+main {
+    margin-top: 1%;
+    font-size: large;
+}
+
+main > h2 {
+    margin: auto;
+    width: fit-content;
+    border: 2px solid black;
+}
+
+
+.gradiante {
+    margin: 3% auto 0%;
+    display: grid;
+    max-width: fit-content;
+    height: fit-content;
+    grid-template-columns: repeat(3, 150px);
+    gap: 10px;
+}
+
+.gradiante > img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.gradiante > img:last-child {
+    height: 200px;
+    grid-column: span 2;
+}
+
+.info {
+    font-size: larger;
+    padding-top: 0%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    grid-row: span 2;
+    background-color: burlywood;
+    text-align: center;
+}
+
+#adicionarArte {
+    cursor: pointer;
+}
+
+.wrapper {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3.67vh;
+}
+
+.wrapper > ul > li {
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.wrapper > ul > li > a {
+    color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .gradiante {
+        margin: 15% auto 0%;
+        grid-template-columns: repeat(2, 100px);
+    }
+    body {
+        height: 130vh;
+    }
+  }
