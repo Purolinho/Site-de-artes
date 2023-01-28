@@ -10,16 +10,20 @@ $ConexaoSQL = new mysqli($host, $nome, $password, $nomeSQL) or die("deu ruim");
 @$nome = $_POST["verificarNome"];
 @$senha = $_POST["verificarSenha"];
 
-if(!empty($_SESSION['nome'])) {
-    
+
+@$teste = mysqli_query($ConexaoSQL, "SELECT nome,senha FROM pessoas WHERE nome = '".$_SESSION['nome']."' and senha = '".$_SESSION['senha']."' ");
+
+if($teste = mysqli_num_rows($teste) >= 1) {
+
 } else {
 $_SESSION['nome'] = $nome;
+$_SESSION['senha'] = $senha;
 
-$query = mysqli_query($ConexaoSQL, "SELECT * FROM pessoas WHERE nome='$nome' && senha='$senha'");
+$query = mysqli_query($ConexaoSQL, "SELECT nome,senha FROM pessoas WHERE (nome = '".$nome."') AND (senha='".$senha."')  LIMIT 1");
 
-    if(empty($nome) || empty($senha) || $verificar = mysqli_num_rows($query) == 0) {
+    if(empty($nome) || empty($senha) || $verificar = mysqli_num_rows($query) <= 0) {
         header('Location: login.html');
-        exit();
+        exit("deu nao man");
     }
 }
 ?>

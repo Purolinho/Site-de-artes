@@ -22,7 +22,7 @@ if(empty($_SESSION['nome'])) {
     <img src="HEX_Logo.png" alt="" width="70px">
         
         <ul>
-            <li><a href="main.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="arts.php">Arts</a></li>
             <li><a href="#">Gallery</a></li>
         </ul>

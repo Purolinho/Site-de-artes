@@ -61,7 +61,7 @@ $imagem6 = $imagem6['link'];
         <img src="HEX_Logo.png" alt="" width="70px">
 
         <ul>
-            <li><a href="main.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="arts.php">Arts</a></li>
             <li><a href="#">Gallery</a></li>
         </ul>
@@ -92,7 +92,7 @@ $imagem6 = $imagem6['link'];
         echo "<img src='".$imagem3."' alt='img' class=''>";
         echo "<img src='".$imagem4."' alt='img' class=''>";
         echo "<img src='".$imagem5."' alt='img' class=''>";
-        echo "<img src='".$imagem6."' alt='img' class='c2'>";
+        echo "<img src='".$imagem6."' alt='img' class='c2' r1>";
         
         ?>
 

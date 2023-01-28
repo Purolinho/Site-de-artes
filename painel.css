@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 nav {
@@ -53,6 +54,7 @@ nav > ul:first-of-type > li {
 body {
     background-size: 400%;
     height: 100vh;
+    width: 100vw;
     background-image: linear-gradient(45deg, rgb(0, 255, 157), rgb(255, 166, 0), yellow, orange, rgb(195, 0, 255), rgb(255, 0, 0));
     animation: animação 15s infinite ease;
 }
@@ -66,7 +68,7 @@ body {
 
 main {
     margin-top: 1%;
-    font-size: large;
+    font-size: medium;
 }
 
 main > h2 {
@@ -120,7 +122,7 @@ main > h2 {
 .wrapper > ul {
     display: flex;
     flex-direction: column;
-    gap: 3.67vh;
+    gap: 4vh;
 }
 
 .wrapper > ul > li {
